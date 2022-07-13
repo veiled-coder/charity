@@ -1,0 +1,227 @@
+body{
+    box-sizing: border-box;
+  max-width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+:root{
+     --orange:#CE8163;
+     --green:#7bb952;
+     --blue:#3ea0e6;
+     --deep-blue:#0d446b;
+     --dark-gray:rgb(73, 64, 64);
+     --light-gray:rgb(80, 75, 75);
+
+}
+/* general stylings */
+h2{
+    color: var(--deep-blue);
+    font-size: 2.5vw;
+}
+button,.btn{
+    background-color: var(--orange);
+    border: transparent;
+    color: white;
+    font-weight: bolder;
+}
+/* header stylings */
+header{
+height: 90vh;
+animation: bgChange 3s ease-in-out infinite;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+nav{
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+/* position: relative; */
+
+}
+nav ul {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 3rem;
+}
+nav ul li {
+    list-style: none;
+    font-size: 1.5vw;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+nav ul li a {
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+
+a:hover{
+    border-bottom: 2px solid var(--orange);
+}
+/* styling of the hero text */
+.header--hero{
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+color: white;
+margin-left: 8%;
+}
+.header--hero p{
+    font-size: 1.5vw;
+}
+.desktop--h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 4vw;
+}
+.header--hero .hunger{
+    font-weight: bolder;
+}
+
+.btn-feed{
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+    font-weight: bolder;
+}
+.btn-donate{
+    padding: .7rem;
+}
+    /* history section style */
+    .history{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 0%;
+
+    }
+    .history--date{
+        font-weight: bolder;
+        color: var(--deep-blue);
+    }
+.three--lines{
+        margin-top: 5%;
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+.line--1,.line--2,.line--3{
+height: 5px;
+width: 33.3%;
+margin-left: 1rem;
+    }
+.line--1{
+        background-color: var(--orange);
+    }
+.line--2{
+        background-color:var(--green) ;
+    }
+.line--3{
+    background-color: var(--blue);
+}
+.historyH2--desktop__one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.endPoverty--h3__1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.endPoverty--boxes{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    align-items: flex-end;
+}
+.endPoverty--boxes p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2vw;
+    color: var(--light-gray);
+}
+.endPoverty--boxes h3{
+    font-size: 1.5vw;
+    color: var(--dark-gray);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 9px var(--blue) ;
+    padding: .5rem;
+}
+.btn{
+padding: 1em;
+font-size: 1vw;
+}
+.btn--learn__3{
+    background-color: var(--green);
+}
+.btn--learn__2{
+    background-color: var(--blue);
+}
+@keyframes bgChange{
+    0%{
+        background-image: linear-gradient(to right,rgba(32, 10, 10, 0.925), rgba(211, 211, 230, 0.384)),url(/images/poverty1.jpg);
+
+    }
+    50%{
+        background-image: linear-gradient(to right,rgba(41, 28, 28, 0.945), rgba(90, 90, 107, 0.527)),url(/images/poverty2.jpg);
+
+
+    }
+    100%{
+        background-image: linear-gradient(to right,rgba(37, 24, 24, 0.904), rgba(90, 90, 107, 0.527)),url(/images/poverty3.jpg);
+
+
+    }
+    
+}
+@media(max-width:992.98px){
+    .desktop--ul{
+        display: none;
+    }
+    .endPoverty--boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    .endPoverty--boxes p, .endPoverty--boxes h3 , .btn{
+        font-size: 3.5vw;
+    }
+   .header--hero__div .hunger{
+       font-size: 5vw;
+   }
+   .header--hero__div p{
+       font-size: 3vw;
+   }
+   .desktop--h1{
+       font-size: 6vw;
+   }
+}
+@media(min-width:992px){
+    .historyH2--mobile__one{
+        display: none;
+    }
+}
